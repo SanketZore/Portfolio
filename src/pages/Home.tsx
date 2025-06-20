@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Download, Code, Database, Server } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -24,16 +25,16 @@ const Home = () => {
             
             <div className="flex flex-wrap gap-4 justify-center mb-12 animate-fade-in" style={{animationDelay: '0.6s'}}>
               <Button asChild className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 hover-glow transition-all duration-300">
-                <a href="/contact">
+                <Link to="/contact">
                   <Mail className="mr-2" size={16} />
                   Get In Touch
-                </a>
+                </Link>
               </Button>
               <Button variant="outline" asChild className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 hover-glow transition-all duration-300">
-                <a href="/projects">
+                <Link to="/projects">
                   <Code className="mr-2" size={16} />
                   View Projects
-                </a>
+                </Link>
               </Button>
               <Button variant="outline" asChild className="border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900 hover-glow transition-all duration-300">
                 <a href="https://drive.google.com/file/d/1Dm2WiZ0KJ5Z7VbZj0KufKmQIRgk_M7ax/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
