@@ -26,7 +26,7 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "MERN Stack Billing System",
+      title: "Advocate Billing System",
       description: "Solely developed a complete billing system for an advocate, enabling PDF bill generation and file storage with secure user authentication.",
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
       technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "RESTful API", "PDF Generation"],
@@ -36,6 +36,16 @@ const Projects = () => {
     },
     {
       id: 4,
+      title: "Guruji Pooja Seva Portal",
+      description: "A comprehensive spiritual services platform connecting devotees with religious ceremonies and puja services. Features booking system, service management, and secure payment integration.",
+      image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600&h=400&fit=crop",
+      technologies: ["React.js", "Node.js", "MongoDB", "Express.js", "Payment Gateway", "Authentication"],
+      githubUrl: "https://github.com/SanketZore",
+      liveUrl: "https://guruji-pooja-seva-portal.vercel.app/",
+      duration: "Recent Project"
+    },
+    {
+      id: 5,
       title: "Shopping Mall Management System",
       description: "Team project implementing features like inventory management, add-to-cart functionality, and secure transactions using Spring Boot.",
       image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",

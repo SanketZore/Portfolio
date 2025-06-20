@@ -18,7 +18,7 @@ const Home = () => {
               </p>
               <p className="text-lg text-slate-300 mb-12 max-w-2xl mx-auto animate-fade-in" style={{animationDelay: '0.4s'}}>
                 Passionate about building scalable backend applications with Java, Spring Boot, and modern web technologies. 
-                Currently pursuing Information Technology at VPCE Mumbai.
+                Currently pursuing Information Technology at Vasantdada Patil Pratisthans College Of Engineering (VPPCOE) Mumbai.
               </p>
             </div>
             
