@@ -40,12 +40,22 @@ const Projects = () => {
       description: "A comprehensive spiritual services platform connecting devotees with religious ceremonies and puja services. Features booking system, service management, and secure payment integration.",
       image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600&h=400&fit=crop",
       technologies: ["React.js", "Node.js", "MongoDB", "Express.js", "Payment Gateway", "Authentication"],
-      githubUrl: "https://github.com/SanketZore",
-      liveUrl: "https://guruji-pooja-seva-portal.vercel.app/",
+      githubUrl: "https://github.com/SanketZore/E-GURUJI.git",
+      liveUrl: "https://e-guruji.vercel.app/",
       duration: "Recent Project"
     },
     {
-      id: 5,
+    id: 5,
+    title: "Log Analyzer",
+    description: "A full-stack application to upload or process system log files in real-time, enabling search, filtering, classification, and visualization to quickly identify errors and warnings.",
+    image: "https://images.unsplash.com/photo-1581092334167-e9a1f4b87e2b?w=600&h=400&fit=crop",
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Bootstrap", "JWT", "ELK Stack"],
+    githubUrl: "https://github.com/SanketZore/Log-Analyzer.git",
+    liveUrl: "https://log-analyzer-seven.vercel.app/",
+    duration: "Recent Project"
+    },
+    {
+      id: 6,
       title: "Shopping Mall Management System",
       description: "Team project implementing features like inventory management, add-to-cart functionality, and secure transactions using Spring Boot.",
       image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
