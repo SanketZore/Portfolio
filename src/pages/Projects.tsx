@@ -48,7 +48,7 @@ const Projects = () => {
     id: 5,
     title: "Log Analyzer",
     description: "A full-stack application to upload or process system log files in real-time, enabling search, filtering, classification, and visualization to quickly identify errors and warnings.",
-    image: "https://images.unsplash.com/photo-1581092334167-e9a1f4b87e2b?w=600&h=400&fit=crop",
+    image: "https://media.licdn.com/dms/image/v2/D4D12AQF0mXlG1TI2Rw/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1739181516071?e=1758153600&v=beta&t=ZqkWGaIIjPzB9MkbZ42YtJ577SZf43PJ5FAZTz7L3CQ",
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Bootstrap", "JWT", "ELK Stack"],
     githubUrl: "https://github.com/SanketZore/Log-Analyzer.git",
     liveUrl: "https://log-analyzer-seven.vercel.app/",
