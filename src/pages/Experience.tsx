@@ -4,8 +4,22 @@ import { MapPin, Calendar, Briefcase, GraduationCap, Award } from "lucide-react"
 const Experience = () => {
   const workExperience = [
     {
+      company: "EduvanceAI",
+      position: "Jr Software Developer",
+      duration: "Sep 2025 - Present",
+      location: "Mumbai, Maharashtra",
+      description: "Contributing to AI-based simulation and learning platforms by developing intelligent RAG chatbots, integrating LLM-powered solutions, and supporting scalable deployments.",
+      achievements: [
+        "Developed intelligent chatbots using RAG for personalized learning experiences",
+        "Worked on autonomous systems, agentic workflows, and LMS architecture",
+        "Integrated AI/LLM solutions to improve automation and user engagement",
+        "Used AWS, Docker, Python, Flask, Django, REST APIs, and Git for scalable delivery",
+        "Focused on reducing latency and optimizing token cost in LLM-based systems"
+      ]
+    },
+    {
       company: "TNS India Foundation",
-      position: "Java Developer Intern",
+      position: "Java Developer Trainee",
       duration: "July 2023 - Jun 2024",
       location: "Mumbai, Maharashtra",
       description: "During my internship, I solely developed a MERN stack billing system for an advocate, enabling PDF bill generation and file storage. Also worked in a team on a Shopping Mall Management System using Spring Boot.",
@@ -59,6 +73,7 @@ const Experience = () => {
 
   const certifications = [
     { name: "TNS India Foundation (Campus to Technical Careers Training Program)", issuer: "TNS India Foundation", year: "2024" },
+    { name: "Software Engineering and Agile Software Development", issuer: "Infosys", year: "2024" },
     { name: "The Complete ReactJs Course", issuer: "Udemy", year: "2024" },
     { name: "Data Analytics", issuer: "IBM", year: "2023" },
     { name: "SolidWorks (3D Modeling)", issuer: "Udemy", year: "2023" },
@@ -67,7 +82,7 @@ const Experience = () => {
   ];
 
   return (
-    <div className="pt-20 min-h-screen">
+    <div className="relative z-10 pt-20 min-h-screen">
       <div className="container mx-auto px-6 py-20">
         {/* Header */}
         <div className="text-center mb-16">
@@ -75,7 +90,7 @@ const Experience = () => {
             Experience
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            My professional journey and educational background in software development and engineering
+            My professional journey across full-stack development, AI systems, backend engineering, and education
           </p>
         </div>
 
@@ -87,7 +102,7 @@ const Experience = () => {
           </h2>
           <div className="space-y-8">
             {workExperience.map((job, index) => (
-              <div key={index} className="bg-slate-800/30 rounded-xl p-6 hover:bg-slate-800/40 transition-all duration-300">
+              <div key={index} className="glass-3d tilt-card rounded-xl p-6 transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-semibold text-purple-300 mb-1">{job.position}</h3>
@@ -129,7 +144,7 @@ const Experience = () => {
           </h2>
           <div className="space-y-8">
             {education.map((edu, index) => (
-              <div key={index} className="bg-slate-800/30 rounded-xl p-6">
+              <div key={index} className="glass-3d tilt-card rounded-xl p-6">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-semibold text-purple-300 mb-1">{edu.degree}</h3>
@@ -171,7 +186,7 @@ const Experience = () => {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
-              <div key={index} className="bg-slate-800/30 rounded-xl p-6 text-center hover:bg-slate-800/40 transition-all duration-300">
+              <div key={index} className="glass-3d tilt-card rounded-xl p-6 text-center transition-all duration-300">
                 <h3 className="text-lg font-semibold text-purple-300 mb-2">{cert.name}</h3>
                 <p className="text-gray-300 mb-1">{cert.issuer}</p>
                 <p className="text-gray-400 text-sm">{cert.year}</p>

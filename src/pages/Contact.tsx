@@ -147,8 +147,6 @@ const Contact = () => {
                 <li>• Backend development opportunities</li>
                 <li>• Software Development Engineer</li>
                 <li>• Full-stack development roles</li>
-                <li>• Spring Boot projects</li>
-                <li>• Internship opportunities</li>
                 <li>• Freelance projects</li>
               </ul>
             </div>

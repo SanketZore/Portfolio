@@ -33,10 +33,15 @@
   * {
     @apply border-border;
   }
-  body {
+body {
     @apply bg-background text-foreground;
     font-family: "Inter", sans-serif;
+    overflow-x: hidden;
   }
+}
+
+#root {
+  min-height: 100vh;
 }
 
 /* Enhanced Animation Utilities */
@@ -169,6 +174,44 @@
   }
 }
 
+@keyframes grid-flight {
+  0% {
+    transform: rotateX(64deg) translateY(0);
+  }
+  100% {
+    transform: rotateX(64deg) translateY(72px);
+  }
+}
+
+@keyframes orbit-spin {
+  from {
+    transform: rotateX(68deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(68deg) rotateZ(360deg);
+  }
+}
+
+@keyframes cube-drift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotateX(58deg) rotateY(28deg) rotateZ(0deg);
+  }
+  50% {
+    transform: translate3d(0, -18px, 32px) rotateX(70deg) rotateY(48deg) rotateZ(14deg);
+  }
+}
+
+@keyframes beam-scan {
+  0%, 100% {
+    opacity: 0.08;
+    transform: translateX(-20%) rotate(18deg);
+  }
+  50% {
+    opacity: 0.34;
+    transform: translateX(20%) rotate(18deg);
+  }
+}
+
 /* Loading text animation for name */
 @keyframes loading-text {
   0% {
@@ -276,7 +319,7 @@
 }
 
 .hover-scale-glow:hover {
-  transform: scale(1.02);
+  transform: translateY(-8px) rotateX(4deg) rotateY(-4deg) scale(1.02);
   box-shadow: 0 15px 40px rgba(34, 211, 238, 0.3);
 }
 
@@ -301,6 +344,181 @@
   @apply bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400 bg-clip-text text-transparent;
   background-size: 300% 300%;
   animation: gradient-xy 4s ease infinite;
+}
+
+.holographic-scene {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.depth-grid {
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  bottom: -18%;
+  height: 62%;
+  transform-origin: 50% 100%;
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.16) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(to top, black, transparent 78%);
+  animation: grid-flight 8s linear infinite;
+}
+
+.depth-grid-back {
+  opacity: 0.22;
+}
+
+.depth-grid-front {
+  bottom: -8%;
+  background-size: 34px 34px;
+  opacity: 0.12;
+  animation-duration: 5s;
+}
+
+.neural-orbit {
+  position: absolute;
+  border: 1px solid rgba(45, 212, 191, 0.26);
+  border-radius: 9999px;
+  box-shadow: 0 0 48px rgba(45, 212, 191, 0.14), inset 0 0 24px rgba(167, 139, 250, 0.12);
+  animation: orbit-spin 18s linear infinite;
+}
+
+.neural-orbit-one {
+  width: 420px;
+  height: 420px;
+  top: 13%;
+  right: 7%;
+}
+
+.neural-orbit-two {
+  width: 260px;
+  height: 260px;
+  left: 8%;
+  top: 34%;
+  animation-duration: 13s;
+  animation-direction: reverse;
+}
+
+.floating-cube {
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  transform-style: preserve-3d;
+  border: 1px solid rgba(125, 211, 252, 0.4);
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.18), rgba(168, 85, 247, 0.12));
+  box-shadow: 0 0 34px rgba(34, 211, 238, 0.18), inset 0 0 28px rgba(255, 255, 255, 0.06);
+  animation: cube-drift 7s ease-in-out infinite;
+}
+
+.cube-one {
+  top: 19%;
+  left: 13%;
+}
+
+.cube-two {
+  width: 52px;
+  height: 52px;
+  right: 16%;
+  top: 58%;
+  animation-delay: 1.2s;
+  animation-duration: 9s;
+}
+
+.cube-three {
+  width: 42px;
+  height: 42px;
+  left: 58%;
+  top: 28%;
+  animation-delay: 2s;
+  animation-duration: 8s;
+}
+
+.data-beam {
+  position: absolute;
+  width: 42vw;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.65), rgba(168, 85, 247, 0.55), transparent);
+  filter: blur(0.2px);
+  animation: beam-scan 6s ease-in-out infinite;
+}
+
+.beam-one {
+  top: 24%;
+  left: 8%;
+}
+
+.beam-two {
+  right: 5%;
+  bottom: 28%;
+  animation-delay: 2s;
+}
+
+.glass-3d {
+  position: relative;
+  transform-style: preserve-3d;
+  border: 1px solid rgba(125, 211, 252, 0.22);
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.74), rgba(17, 24, 39, 0.46));
+  box-shadow: 0 24px 80px rgba(2, 6, 23, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.glass-3d::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(34, 211, 238, 0.16), transparent 36%, rgba(168, 85, 247, 0.14));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.glass-3d:hover::before {
+  opacity: 1;
+}
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.32s ease, border-color 0.32s ease, box-shadow 0.32s ease;
+}
+
+.tilt-card:hover {
+  transform: perspective(900px) rotateX(5deg) rotateY(-6deg) translateY(-10px);
+  border-color: rgba(34, 211, 238, 0.46);
+  box-shadow: 0 28px 72px rgba(8, 145, 178, 0.18), 0 18px 44px rgba(0, 0, 0, 0.38);
+}
+
+.terminal-panel {
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.86), rgba(15, 23, 42, 0.86)),
+    repeating-linear-gradient(0deg, rgba(34, 211, 238, 0.08) 0 1px, transparent 1px 6px);
+}
+
+.depth-chip {
+  box-shadow: 0 8px 22px rgba(34, 211, 238, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 768px) {
+  .neural-orbit-one {
+    width: 260px;
+    height: 260px;
+    right: -18%;
+  }
+
+  .neural-orbit-two,
+  .cube-three {
+    display: none;
+  }
+
+  .floating-cube {
+    opacity: 0.55;
+  }
 }
 
 /* Loading spinner */

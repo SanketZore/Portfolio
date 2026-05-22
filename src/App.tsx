@@ -13,6 +13,7 @@ import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import HolographicScene from "./components/HolographicScene";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -21,7 +22,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+        <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_left,#0f766e33,transparent_32%),radial-gradient(circle_at_75%_20%,#7c3aed26,transparent_34%),linear-gradient(135deg,#020617,#0f172a_45%,#111827)] text-white">
+          <HolographicScene />
           <Header />
            <ScrollToTop />
           <Routes>

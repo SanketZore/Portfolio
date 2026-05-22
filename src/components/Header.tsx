@@ -18,7 +18,7 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-cyan-500/20">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-cyan-500/20 bg-slate-950/70 backdrop-blur-xl shadow-[0_12px_40px_rgba(8,145,178,0.08)]">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
