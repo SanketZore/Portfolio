@@ -1,5 +1,6 @@
 
 import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react";
+import LeetCodeIcon from "@/components/icons/LeetCodeIcon";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -124,6 +125,7 @@ const Contact = () => {
                   href="https://github.com/SanketZore" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  aria-label="GitHub profile"
                   className="p-3 bg-slate-800/30 rounded-lg hover:bg-purple-600 transition-all duration-300 transform hover:scale-110"
                 >
                   <Github size={24} />
@@ -132,9 +134,19 @@ const Contact = () => {
                   href="https://www.linkedin.com/in/sanketzore135" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  aria-label="LinkedIn profile"
                   className="p-3 bg-slate-800/30 rounded-lg hover:bg-purple-600 transition-all duration-300 transform hover:scale-110"
                 >
                   <Linkedin size={24} />
+                </a>
+                <a
+                  href="https://leetcode.com/u/SanketZore/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LeetCode profile"
+                  className="p-3 bg-slate-800/30 rounded-lg hover:bg-purple-600 transition-all duration-300 transform hover:scale-110"
+                >
+                  <LeetCodeIcon className="h-6 w-6" />
                 </a>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import LeetCodeIcon from "./icons/LeetCodeIcon";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -21,13 +22,16 @@ const Footer = () => {
               Building Agentic AI workflows, full-stack products, backend systems, and cloud-ready software with a focus on practical automation and clean engineering.
             </p>
             <div className="mt-6 flex space-x-3">
-              <a href="https://github.com/SanketZore" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-zinc-400 transition-colors hover:border-orange-400 hover:text-orange-400">
+              <a href="https://github.com/SanketZore" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-zinc-400 transition-colors hover:border-orange-400 hover:text-orange-400">
                 <Github size={20} />
               </a>
-              <a href="https://www.linkedin.com/in/sanketzore135" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-zinc-400 transition-colors hover:border-orange-400 hover:text-orange-400">
+              <a href="https://www.linkedin.com/in/sanketzore135" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-zinc-400 transition-colors hover:border-orange-400 hover:text-orange-400">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:sanketzore348@gmail.com" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-zinc-400 transition-colors hover:border-orange-400 hover:text-orange-400">
+              <a href="https://leetcode.com/u/SanketZore/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode profile" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-zinc-400 transition-colors hover:border-orange-400 hover:text-orange-400">
+                <LeetCodeIcon className="h-5 w-5" />
+              </a>
+              <a href="mailto:sanketzore348@gmail.com" aria-label="Email Sanket Zore" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-zinc-400 transition-colors hover:border-orange-400 hover:text-orange-400">
                 <Mail size={20} />
               </a>
             </div>

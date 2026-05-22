@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home, User, Briefcase, Code, Mail, Menu, X, Github, Linkedin } from "lucide-react";
+import LeetCodeIcon from "./icons/LeetCodeIcon";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,11 +52,14 @@ const Header = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
-            <a href="https://github.com/SanketZore" target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-zinc-300 transition-colors hover:border-orange-400 hover:text-orange-400">
+            <a href="https://github.com/SanketZore" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-zinc-300 transition-colors hover:border-orange-400 hover:text-orange-400">
               <Github size={16} />
             </a>
-            <a href="https://www.linkedin.com/in/sanketzore135" target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-zinc-300 transition-colors hover:border-orange-400 hover:text-orange-400">
+            <a href="https://www.linkedin.com/in/sanketzore135" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-zinc-300 transition-colors hover:border-orange-400 hover:text-orange-400">
               <Linkedin size={16} />
+            </a>
+            <a href="https://leetcode.com/u/SanketZore/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode profile" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-zinc-300 transition-colors hover:border-orange-400 hover:text-orange-400">
+              <LeetCodeIcon className="h-4 w-4" />
             </a>
           </div>
 
