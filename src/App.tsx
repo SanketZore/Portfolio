@@ -22,7 +22,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_left,#0f766e33,transparent_32%),radial-gradient(circle_at_75%_20%,#7c3aed26,transparent_34%),linear-gradient(135deg,#020617,#0f172a_45%,#111827)] text-white">
+        <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_80%_10%,#f9731626,transparent_34%),radial-gradient(circle_at_10%_35%,#64748b1f,transparent_34%),linear-gradient(135deg,#050607,#0b1117_48%,#11100d)] text-white">
           <HolographicScene />
           <Header />
            <ScrollToTop />

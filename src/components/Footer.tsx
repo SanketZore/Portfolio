@@ -1,63 +1,71 @@
-
-import { Heart, Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="relative z-10 bg-slate-950/70 backdrop-blur-xl border-t border-cyan-500/20 py-12">
+    <footer className="relative z-10 border-t border-white/10 bg-black/70 py-12 backdrop-blur-xl">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(249,115,22,0.12),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.03),transparent)]" />
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Brand */}
-          <div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-4">
-              Sanket Ramesh Zore
-            </h3>
-            <p className="text-slate-400 mb-4">
-              Software Developer passionate about creating innovative solutions and building scalable backend applications.
+        <div className="relative flex flex-wrap items-start justify-between gap-8">
+          <div className="min-w-[280px] flex-1">
+            <Link to="/" className="mb-5 flex items-center gap-3">
+              <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-orange-500 font-black text-black shadow-[0_0_28px_rgba(249,115,22,0.28)]">
+                SZ
+              </span>
+              <span>
+                <span className="block text-sm font-bold uppercase tracking-[0.2em] text-white">Sanket Zore</span>
+                <span className="block text-xs text-zinc-400">Software Developer</span>
+              </span>
+            </Link>
+            <p className="max-w-md leading-7 text-zinc-400">
+              Building Agentic AI workflows, full-stack products, backend systems, and cloud-ready software with a focus on practical automation and clean engineering.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://github.com/SanketZore" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
+            <div className="mt-6 flex space-x-3">
+              <a href="https://github.com/SanketZore" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-zinc-400 transition-colors hover:border-orange-400 hover:text-orange-400">
                 <Github size={20} />
               </a>
-              <a href="https://www.linkedin.com/in/sanketzore135" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors">
+              <a href="https://www.linkedin.com/in/sanketzore135" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-zinc-400 transition-colors hover:border-orange-400 hover:text-orange-400">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:sanketzore348@gmail.com" className="text-slate-400 hover:text-emerald-400 transition-colors">
+              <a href="mailto:sanketzore348@gmail.com" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-zinc-400 transition-colors hover:border-orange-400 hover:text-orange-400">
                 <Mail size={20} />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold text-cyan-300 mb-4">Quick Links</h4>
-            <div className="space-y-2">
-              <Link to="/" className="block text-slate-400 hover:text-white transition-colors">Home</Link>
-              <Link to="/about" className="block text-slate-400 hover:text-white transition-colors">About</Link>
-              <Link to="/projects" className="block text-slate-400 hover:text-white transition-colors">Projects</Link>
-              <Link to="/experience" className="block text-slate-400 hover:text-white transition-colors">Experience</Link>
-              <Link to="/contact" className="block text-slate-400 hover:text-white transition-colors">Contact</Link>
+          <div className="min-w-[320px] flex-1">
+            <h4 className="mb-5 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">Explore</h4>
+            <div className="flex flex-wrap gap-x-6 gap-y-3">
+              <Link to="/" className="text-zinc-400 transition-colors hover:text-orange-400">Home</Link>
+              <Link to="/about" className="text-zinc-400 transition-colors hover:text-orange-400">About</Link>
+              <Link to="/projects" className="text-zinc-400 transition-colors hover:text-orange-400">Projects</Link>
+              <Link to="/experience" className="text-zinc-400 transition-colors hover:text-orange-400">Experience</Link>
+              <Link to="/contact" className="text-zinc-400 transition-colors hover:text-orange-400">Contact</Link>
             </div>
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-semibold text-cyan-300 mb-4">Get In Touch</h4>
-            <div className="space-y-2 text-slate-400">
-              <p>Mumbai - 400030, Maharashtra</p>
-              <a href="mailto:sanketzore348@gmail.com" className="hover:text-cyan-400 transition-colors">sanketzore348@gmail.com</a>
-              <a href="tel:+919769957469" className="hover:text-cyan-400 transition-colors">+91 9769957469</a>
+          <div className="min-w-[360px] flex-[1.2]">
+            <h4 className="mb-5 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">Get In Touch</h4>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-4 text-zinc-400">
+              <p className="flex items-center gap-3">
+                <MapPin className="text-orange-400" size={18} />
+                Mumbai - 400030, Maharashtra
+              </p>
+              <a href="mailto:sanketzore348@gmail.com" className="flex items-center gap-3 transition-colors hover:text-orange-400">
+                <Mail className="text-orange-400" size={18} />
+                sanketzore348@gmail.com
+              </a>
+              <a href="tel:+919769957469" className="flex items-center gap-3 transition-colors hover:text-orange-400">
+                <Phone className="text-orange-400" size={18} />
+                +91 9769957469
+              </a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-cyan-500/20 mt-8 pt-8 text-center">
-          <p className="text-slate-400 flex items-center justify-center">
-            Made with <Heart className="mx-2 text-red-400" size={16} /> by Sanket Ramesh Zore
-          </p>
-          <p className="text-slate-500 text-sm mt-2">
-            © {new Date().getFullYear()} All rights reserved.
-          </p>
+        <div className="relative mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-zinc-500 md:flex-row md:items-center md:justify-between">
+          <p>© {new Date().getFullYear()} Sanket Ramesh Zore. All rights reserved.</p>
+          <p className="uppercase tracking-[0.18em]">Agentic AI | Full Stack | Backend Systems</p>
         </div>
       </div>
     </footer>

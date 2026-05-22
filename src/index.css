@@ -12,19 +12,19 @@
     --card-foreground: 210 40% 98%;
     --popover: 210 40% 6%;
     --popover-foreground: 210 40% 98%;
-    --primary: 189 100% 56%;
+    --primary: 24 95% 53%;
     --primary-foreground: 210 40% 6%;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 189 100% 56%;
+    --accent: 24 95% 53%;
     --accent-foreground: 210 40% 6%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 189 100% 56%;
+    --ring: 24 95% 53%;
     --radius: 0.75rem;
   }
 }
@@ -230,10 +230,10 @@ body {
 
 @keyframes text-glow {
   0%, 100% {
-    text-shadow: 0 0 5px rgba(34, 211, 238, 0.5), 0 0 10px rgba(34, 211, 238, 0.3);
+  text-shadow: 0 0 5px rgba(249, 115, 22, 0.5), 0 0 10px rgba(249, 115, 22, 0.3);
   }
   50% {
-    text-shadow: 0 0 20px rgba(34, 211, 238, 0.8), 0 0 30px rgba(34, 211, 238, 0.6), 0 0 40px rgba(34, 211, 238, 0.4);
+    text-shadow: 0 0 20px rgba(249, 115, 22, 0.8), 0 0 30px rgba(249, 115, 22, 0.6), 0 0 40px rgba(249, 115, 22, 0.4);
   }
 }
 
@@ -311,7 +311,7 @@ body {
 
 .hover-scale:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(34, 211, 238, 0.4);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.34);
 }
 
 .hover-scale-glow {
@@ -320,7 +320,7 @@ body {
 
 .hover-scale-glow:hover {
   transform: translateY(-8px) rotateX(4deg) rotateY(-4deg) scale(1.02);
-  box-shadow: 0 15px 40px rgba(34, 211, 238, 0.3);
+  box-shadow: 0 15px 40px rgba(249, 115, 22, 0.28);
 }
 
 .hover-glow {
@@ -328,7 +328,7 @@ body {
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.42);
 }
 
 .hover-bounce {
@@ -341,7 +341,7 @@ body {
 
 /* Gradient Text Animation */
 .gradient-text-animated {
-  @apply bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-orange-400 via-amber-200 to-white bg-clip-text text-transparent;
   background-size: 300% 300%;
   animation: gradient-xy 4s ease infinite;
 }
@@ -363,8 +363,8 @@ body {
   height: 62%;
   transform-origin: 50% 100%;
   background-image:
-    linear-gradient(rgba(34, 211, 238, 0.18) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(34, 211, 238, 0.16) 1px, transparent 1px);
+    linear-gradient(rgba(249, 115, 22, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249, 115, 22, 0.1) 1px, transparent 1px);
   background-size: 64px 64px;
   mask-image: linear-gradient(to top, black, transparent 78%);
   animation: grid-flight 8s linear infinite;
@@ -383,9 +383,9 @@ body {
 
 .neural-orbit {
   position: absolute;
-  border: 1px solid rgba(45, 212, 191, 0.26);
+  border: 1px solid rgba(249, 115, 22, 0.22);
   border-radius: 9999px;
-  box-shadow: 0 0 48px rgba(45, 212, 191, 0.14), inset 0 0 24px rgba(167, 139, 250, 0.12);
+  box-shadow: 0 0 48px rgba(249, 115, 22, 0.12), inset 0 0 24px rgba(251, 191, 36, 0.08);
   animation: orbit-spin 18s linear infinite;
 }
 
@@ -410,9 +410,9 @@ body {
   width: 74px;
   height: 74px;
   transform-style: preserve-3d;
-  border: 1px solid rgba(125, 211, 252, 0.4);
-  background: linear-gradient(135deg, rgba(34, 211, 238, 0.18), rgba(168, 85, 247, 0.12));
-  box-shadow: 0 0 34px rgba(34, 211, 238, 0.18), inset 0 0 28px rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(251, 146, 60, 0.34);
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.14), rgba(251, 191, 36, 0.06));
+  box-shadow: 0 0 34px rgba(249, 115, 22, 0.13), inset 0 0 28px rgba(255, 255, 255, 0.04);
   animation: cube-drift 7s ease-in-out infinite;
 }
 
@@ -443,7 +443,7 @@ body {
   position: absolute;
   width: 42vw;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.65), rgba(168, 85, 247, 0.55), transparent);
+  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.5), rgba(251, 191, 36, 0.34), transparent);
   filter: blur(0.2px);
   animation: beam-scan 6s ease-in-out infinite;
 }
@@ -462,8 +462,8 @@ body {
 .glass-3d {
   position: relative;
   transform-style: preserve-3d;
-  border: 1px solid rgba(125, 211, 252, 0.22);
-  background: linear-gradient(145deg, rgba(15, 23, 42, 0.74), rgba(17, 24, 39, 0.46));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(145deg, rgba(18, 18, 18, 0.78), rgba(12, 15, 18, 0.5));
   box-shadow: 0 24px 80px rgba(2, 6, 23, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(18px);
 }
@@ -473,7 +473,7 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(120deg, rgba(34, 211, 238, 0.16), transparent 36%, rgba(168, 85, 247, 0.14));
+  background: linear-gradient(120deg, rgba(249, 115, 22, 0.14), transparent 36%, rgba(251, 191, 36, 0.08));
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -490,18 +490,30 @@ body {
 
 .tilt-card:hover {
   transform: perspective(900px) rotateX(5deg) rotateY(-6deg) translateY(-10px);
-  border-color: rgba(34, 211, 238, 0.46);
-  box-shadow: 0 28px 72px rgba(8, 145, 178, 0.18), 0 18px 44px rgba(0, 0, 0, 0.38);
+  border-color: rgba(249, 115, 22, 0.46);
+  box-shadow: 0 28px 72px rgba(249, 115, 22, 0.13), 0 18px 44px rgba(0, 0, 0, 0.38);
 }
 
 .terminal-panel {
   background:
     linear-gradient(rgba(15, 23, 42, 0.86), rgba(15, 23, 42, 0.86)),
-    repeating-linear-gradient(0deg, rgba(34, 211, 238, 0.08) 0 1px, transparent 1px 6px);
+    repeating-linear-gradient(0deg, rgba(249, 115, 22, 0.06) 0 1px, transparent 1px 6px);
 }
 
 .depth-chip {
-  box-shadow: 0 8px 22px rgba(34, 211, 238, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 22px rgba(249, 115, 22, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.cinematic-card {
+  transform-style: preserve-3d;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: transform 0.32s ease, border-color 0.32s ease, box-shadow 0.32s ease;
+}
+
+.cinematic-card:hover {
+  transform: perspective(900px) rotateX(4deg) rotateY(-4deg) translateY(-8px);
+  border-color: rgba(249, 115, 22, 0.46);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.42), 0 18px 42px rgba(249, 115, 22, 0.13);
 }
 
 @media (max-width: 768px) {
@@ -546,14 +558,14 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1e293b;
+  background: #09090b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #06b6d4;
+  background: #f97316;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0891b2;
+  background: #fb923c;
 }
